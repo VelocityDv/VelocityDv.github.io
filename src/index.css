@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --font-size: 16px;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* Dataflow Brand Palette */
+  --background: #F5F0E8;
+  --foreground: #2A2A2E;
+  --card: #EDE8DF;
+  --card-foreground: #2A2A2E;
+  --popover: #EDE8DF;
+  --popover-foreground: #2A2A2E;
+
+  --primary: #1C3D34;
+  --primary-foreground: #F5F0E8;
+
+  --secondary: #EDE8DF;
+  --secondary-foreground: #1C3D34;
+
+  --muted: #EDE8DF;
+  --muted-foreground: #8A9A94;
+
+  --accent: #C4863C;
+  --accent-foreground: #F5F0E8;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #D5D0C8;
+  --input: #D5D0C8;
+  --input-background: #F5F0E8;
+  --switch-background: #D5D0C8;
+
+  --ring: #1C3D34;
+
+  --chart-1: #1C3D34;
+  --chart-2: #C4863C;
+  --chart-3: #8A9A94;
+  --chart-4: #2A2A2E;
+  --chart-5: #D5D0C8;
+
+  --radius: 0.5rem;
+
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3, h4, label, button, input {
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+}
